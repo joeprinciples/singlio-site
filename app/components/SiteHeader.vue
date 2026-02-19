@@ -5,7 +5,7 @@
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5 flex items-center gap-3">
+        <a href="/" class="-m-1.5 p-1.5 flex items-center gap-3">
           <img
             class="h-9 w-auto rounded-xl"
             src="/singlio-icon.png"
@@ -44,7 +44,7 @@
           class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#0e0d17] p-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
         >
           <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5 flex items-center gap-3">
+            <a href="/" class="-m-1.5 p-1.5 flex items-center gap-3">
               <img
                 class="h-9 w-auto rounded-xl"
                 src="/singlio-icon.png"

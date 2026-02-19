@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="pb-16 pt-10">
         <div
-          class="flex flex-col items-center justify-between gap-2 md:flex-row"
+          class="flex flex-col items-start justify-between gap-2 md:flex-row md:items-center"
         >
           <p class="text-sm text-white/60">
             &copy; {{ new Date().getFullYear() }} First Principles Studio Ltd.
