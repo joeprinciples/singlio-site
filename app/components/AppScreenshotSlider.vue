@@ -4,8 +4,7 @@
       <div
         v-for="img in images"
         :key="img"
-        class="keen-slider__slide"
-        class="slide-size"
+        class="keen-slider__slide slide-size"
       >
         <img
           :src="img"
