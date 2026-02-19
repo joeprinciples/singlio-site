@@ -5,7 +5,7 @@
         v-for="img in images"
         :key="img"
         class="keen-slider__slide"
-        style="min-width: 320px; max-width: 380px;"
+        class="slide-size"
       >
         <img
           :src="img"
@@ -41,12 +41,13 @@ let slider = null;
 
 onMounted(() => {
   if (sliderRef.value) {
+    const isMobile = window.innerWidth < 640;
     slider = new KeenSlider(sliderRef.value, {
       loop: false,
       mode: "free-snap",
       slides: {
         perView: "auto",
-        spacing: 48,
+        spacing: isMobile ? 16 : 48,
       },
       drag: true,
     });
@@ -57,3 +58,16 @@ onBeforeUnmount(() => {
   if (slider) slider.destroy();
 });
 </script>
+
+<style scoped>
+.slide-size {
+  min-width: 220px;
+  max-width: 260px;
+}
+@media (min-width: 640px) {
+  .slide-size {
+    min-width: 320px;
+    max-width: 380px;
+  }
+}
+</style>

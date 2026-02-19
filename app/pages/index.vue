@@ -7,12 +7,12 @@
       >
         <div class="mx-auto max-w-2xl lg:mx-0 lg:col-span-6">
           <h1
-            class="mt-10 text-5xl leading-tight font-bold tracking-tight text-white sm:text-7xl"
+            class="mt-10 text-4xl leading-tight font-bold tracking-tight text-white sm:text-7xl"
           >
             Train your focus, one session at a time
           </h1>
           <p
-            class="mt-8 max-w-2xl text-xl/8 font-regular text-pretty text-white/80 sm:text-2xl/9"
+            class="mt-8 max-w-2xl text-lg/7 font-regular text-pretty text-white/80 sm:text-2xl/9"
           >
             Singlio helps you understand and improve your focus. Start a session,
             tap when you get distracted, and get a detailed score showing exactly
@@ -39,12 +39,12 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-lg grid gap-4 mb-16">
           <h2
-            class="text-pretty text-5xl font-bold tracking-tight text-white sm:text-5xl"
+            class="text-pretty text-4xl font-bold tracking-tight text-white sm:text-5xl"
           >
             Features
           </h2>
           <p
-            class="max-w-2xl text-xl font-regular text-pretty text-white/80 sm:text-2xl/9"
+            class="max-w-2xl text-lg font-regular text-pretty text-white/80 sm:text-2xl/9"
           >
             Simple by design. Powerful in practice.
           </p>
@@ -58,7 +58,7 @@
               :key="feature.name"
               class="relative pl-16"
             >
-              <dt class="text-lg/7 font-bold text-white">
+              <dt class="text-base/7 font-bold text-white sm:text-lg/7">
                 <div
                   class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-black"
                 >
@@ -70,7 +70,7 @@
                 </div>
                 {{ feature.name }}
               </dt>
-              <dd class="mt-2 text-lg/7 text-white/80">
+              <dd class="mt-2 text-base/7 text-white/80 sm:text-lg/7">
                 {{ feature.description }}
               </dd>
             </div>
@@ -101,7 +101,7 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-4xl">
           <h2
-            class="text-pretty text-5xl font-bold tracking-tight text-white sm:text-5xl"
+            class="text-pretty text-4xl font-bold tracking-tight text-white sm:text-5xl"
           >
             Frequently asked questions
           </h2>
@@ -116,7 +116,7 @@
                   class="flex w-full items-start justify-between text-left text-white"
                   @click="toggleFaq(index)"
                 >
-                  <span class="text-xl font-bold">{{
+                  <span class="text-lg font-bold sm:text-xl">{{
                     faq.question
                   }}</span>
                   <span class="ml-6 flex h-7 items-center">
@@ -130,7 +130,7 @@
                 </button>
               </dt>
               <dd v-if="openFaq === index" class="mt-4 pr-12">
-                <p class="text-lg/8 text-white/80">{{ faq.answer }}</p>
+                <p class="text-base/7 text-white/80 sm:text-lg/8">{{ faq.answer }}</p>
               </dd>
             </div>
           </dl>
