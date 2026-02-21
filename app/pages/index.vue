@@ -24,6 +24,8 @@
             src="/hero-phone.png"
             alt="Singlio app screenshot"
             class="mx-auto w-full max-w-md drop-shadow-xl"
+            decoding="async"
+            fetchpriority="high"
           />
         </div>
       </div>
@@ -33,8 +35,7 @@
     <section
       id="features"
       class="py-24 sm:py-32"
-      data-aos="fade-up"
-      data-aos-duration="600"
+      v-scroll-reveal
     >
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-lg grid gap-4 mb-16">
@@ -83,8 +84,7 @@
     <section
       id="screenshots"
       class="py-24 sm:py-32 overflow-hidden"
-      data-aos="fade-up"
-      data-aos-duration="600"
+      v-scroll-reveal
     >
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <AppScreenshotSlider />
@@ -95,8 +95,7 @@
     <section
       id="faq"
       class="py-24 sm:py-32"
-      data-aos="fade-up"
-      data-aos-duration="600"
+      v-scroll-reveal
     >
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-4xl">

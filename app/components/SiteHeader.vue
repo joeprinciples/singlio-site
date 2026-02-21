@@ -10,6 +10,9 @@
             class="h-9 w-auto rounded-xl"
             src="/singlio-icon.png"
             alt="Singlio"
+            width="36"
+            height="36"
+            decoding="async"
           />
           <span class="text-2xl font-extrabold tracking-tight text-white">
             singlio.
@@ -49,6 +52,9 @@
                 class="h-9 w-auto rounded-xl"
                 src="/singlio-icon.png"
                 alt="Singlio"
+                width="36"
+                height="36"
+                decoding="async"
               />
               <span class="text-2xl font-extrabold tracking-tight text-white">
                 singlio.
