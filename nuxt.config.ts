@@ -90,7 +90,6 @@ export default defineNuxtConfig({
               name: "First Principles Studio Ltd",
               url: "https://principles.studio",
             },
-            aggregateRating: undefined,
           }),
         },
         {
