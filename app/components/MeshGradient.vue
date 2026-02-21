@@ -1,16 +1,12 @@
 <template>
   <div class="fixed inset-0 bg-[#0e0d17]">
-    <canvas
-      ref="canvasRef"
-      class="h-full w-full"
-      :class="isMobile ? '' : ['opacity-0 transition-opacity duration-[3000ms] ease-in', { 'opacity-100': ready }]"
-    />
+    <canvas ref="canvasRef" class="h-full w-full" />
   </div>
 </template>
 
 <script setup>
 const canvasRef = ref(null);
-const ready = ref(false);
+let ready = false;
 
 const isMobile = typeof window !== 'undefined' &&
   (window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window);
@@ -402,7 +398,12 @@ function renderOnce() {
   }
 
   gl.drawArrays(gl.TRIANGLES, 0, 6);
-  if (!ready.value) ready.value = true;
+  if (!ready) {
+    ready = true;
+    if (!isMobile && canvasRef.value) {
+      canvasRef.value.style.opacity = '1';
+    }
+  }
 }
 
 // Desktop-only continuous loop — only draws when ripples are active or resize happened
@@ -437,7 +438,12 @@ function renderLoop() {
   }
 
   gl.drawArrays(gl.TRIANGLES, 0, 6);
-  if (!ready.value) ready.value = true;
+  if (!ready) {
+    ready = true;
+    if (canvasRef.value) {
+      canvasRef.value.style.opacity = '1';
+    }
+  }
   animId = requestAnimationFrame(renderLoop);
 }
 
@@ -466,6 +472,13 @@ onMounted(() => {
   if (!canvasRef.value) return;
 
   const canvas = canvasRef.value;
+
+  // Apply fade-in setup client-side only (avoids SSR hydration mismatch)
+  if (!isMobile) {
+    canvas.style.opacity = '0';
+    canvas.style.transition = 'opacity 3000ms ease-in';
+  }
+
   window.addEventListener("resize", isMobile ? handleResize : resize);
 
   if (isMobile) {
