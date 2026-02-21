@@ -41,7 +41,7 @@
 
     <!-- Mobile menu -->
     <Teleport to="body">
-      <div v-if="mobileMenuOpen" class="fixed inset-0 z-50 lg:hidden">
+      <div v-if="mobileMenuOpen" class="fixed inset-0 z-[60] lg:hidden">
         <div class="fixed inset-0 bg-black/50" @click="mobileMenuOpen = false" />
         <div
           class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#0e0d17] p-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
