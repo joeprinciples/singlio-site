@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "keen-slider": "^6.8.6",
     "lucide-vue-next": "^0.564.0",
     "nuxt": "^4.3.1",
