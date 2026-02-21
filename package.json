@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^7.6.0",
     "keen-slider": "^6.8.6",
     "lucide-vue-next": "^0.564.0",
     "nuxt": "^4.3.1",

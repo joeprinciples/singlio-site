@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: false },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
+  site: {
+    url: "https://singl.io",
+  },
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
   },
