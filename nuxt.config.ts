@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
   site: {
     url: "https://singl.io",
+    trailingSlash: true,
   },
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
@@ -40,7 +41,6 @@ export default defineNuxtConfig({
             "Track distractions, detect flow states, and build better focus habits — one session at a time.",
         },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://singl.io" },
         { property: "og:locale", content: "en_GB" },
         { name: "twitter:card", content: "summary_large_image" },
         {
@@ -58,10 +58,6 @@ export default defineNuxtConfig({
           rel: "icon",
           type: "image/png",
           href: "/singlio-icon.png",
-        },
-        {
-          rel: "canonical",
-          href: "https://singl.io",
         },
       ],
       script: [
